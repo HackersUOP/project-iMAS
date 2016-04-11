@@ -13,15 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-from modules.image_analytic_app.app import *
-from modules.serverapp.app import *
+from __init__ import *
 
-image_analytic_app.config.from_object(__name__)
-image_analytic_app.secret_key = os.urandom(24)
-image_analytic_app.debug = True
 
-server_app.config.from_object(__name__)
-server_app.secret_key = os.urandom(24)
-server_app.debug = True
-
+class headCounting(Resource):
+    def get(self):
+        return jsonify({'image': "value"})

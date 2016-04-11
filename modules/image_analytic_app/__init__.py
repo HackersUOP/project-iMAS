@@ -18,12 +18,4 @@ from flask import Flask
 from flask_restful import Api
 
 # files
-from restfulServices.index import *
-
-app = Flask(__name__)
-api = Api(app)
-
-api.add_resource(index, '/')
-
-if __name__ == '__main__':
-    app.run(host="localhost", port=5000, debug=True)
+from restfulServices.headCounting import *
